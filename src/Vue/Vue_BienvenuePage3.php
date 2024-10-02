@@ -1,10 +1,8 @@
 <?php
-
 namespace App\Vue;
-
 use App\Utilitaire\Vue_Composant;
 
-class Vue_AccueilCaseA extends Vue_Composant
+class Vue_BienvenuePage3 extends Vue_Composant
 {
     private string $msgErreur;
     public function __construct(string $msgErreur ="")
@@ -15,21 +13,20 @@ class Vue_AccueilCaseA extends Vue_Composant
     function donneTexte(): string
     {
         $str= "
-<h1>Vous êtes dans le contexte A!</h1>
+<h1>Café : J'aime !</h1>
 <div  style='    width: 50%;    display: block;    margin: auto;'>  
-    Page d'accueil du contexte A
+    Bienvenue sur le site de la société Café !
+    
+    Pages 3/3
     <form action='index.php' method='post'>
-            <input type='hidden' name='case' value='A'>
-            <button type='submit' name='action' value='pageSuivante'>
-                Aller à la page suivante
+            <input type='hidden' name='action' value='allerPagePrecedente'>
+            <button type='submit' id='submit' name='action' value='Page1' >
+                Page 1
             </button>
-
-            <button type='submit' name='case' value='imc'>
-                Imc
+            <button type='submit' id='submit' name='action' value='Page2' >
+                Page 2
             </button>
     </form>
-    
-     
 </div>
         $this->msgErreur
     ";
