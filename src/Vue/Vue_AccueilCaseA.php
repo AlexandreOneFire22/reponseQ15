@@ -27,6 +27,9 @@ class Vue_AccueilCaseA extends Vue_Composant
             <button type='submit' name='case' value='imc'>
                 Imc
             </button>
+            <button type='submit' name='case' value='orage'>
+                Orage
+            </button>
     </form>
     
      

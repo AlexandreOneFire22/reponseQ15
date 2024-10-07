@@ -3,10 +3,8 @@
 $Vue->setMenu(new \App\Vue\Vue_Imc());
 switch ($action) {
     case "defaut":
-        $Vue->addToCorps(new \App\Vue\Vue_AccueilCaseA());
         break;
     case "resultat":
-        $Vue->addToCorps(new \App\Vue\Vue_AccueilCaseA());
 
         $imc = $_POST["poids"] / (($_POST["taille"] /100) ** 2);
         $imc = round($imc,2);
@@ -33,7 +31,7 @@ switch ($action) {
                 $categorie = "Obésité sévère (supérieur à 40)";
                 break;
         }
-
         $Vue->addToCorps(new \App\Vue\Vue_AfficherMessage("<h3>Votre IMC est de : $imc</h3> <h3>cela correspond à la catégorie : $categorie </h3>"));
+
         break;
 }

@@ -4,7 +4,7 @@ namespace App\Vue;
 
 use App\Utilitaire\Vue_Composant;
 
-class Vue_Imc extends Vue_Composant
+class Vue_Orage extends Vue_Composant
 {
     private string $msgErreur;
     public function __construct(string $msgErreur ="")
@@ -16,29 +16,23 @@ class Vue_Imc extends Vue_Composant
     {
         $str= "
 
-<h1> Calculer votre imc :</h1>
+<h1> Calculer la distance d'un orage :</h1>
 
 <div>
     <form action='' method='post' novalidate>
 
-        <div>
-            <label for='taille'>taille (cm)* :</label>
+        <div class='mb-3'>
+            <label for='temps' class='form-label'>Temps (s)* :</label>
             <input type='number'
-                   id='taille'
-                   name='taille'
-                   placeholder='taille en cm'>
-</div>
+                   class='form-control'
+                   id='temps'
+                   name='temps'
+                    placeholder='temps en seconde'>
+        </div>
 
-<div>
-    <label for='poids'>Poids (kg)* :</label>
-    <input type='number'
-           id='poids'
-           name='poids'
-           placeholder='poids en kg'>
-</div>
 
 <span>
-                <input type='hidden' name='case' value='imc'>
+                <input type='hidden' name='case' value='orage'>
                 <button type='submit' name='action' value='resultat'>Valider</button>
         </span>
 </form>
